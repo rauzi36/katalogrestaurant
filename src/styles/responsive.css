@@ -1,0 +1,155 @@
+.hero {
+  background-image: image-set(
+    url("../public/images/heros/hero-image_4-small.jpg") 1x,
+    url("../public/images/heros/hero-image_4-small.jpg") 2x
+  );
+}
+
+@media screen and (max-width: 640px) {
+  .hero {
+    background-image: image-set(
+    url("../public/images/heros/hero-image_4-large.jpg") 1x,
+    url("../public/images/heros/hero-image_4-large.jpg") 2x
+  );
+  }
+}
+.daftar {
+  display: grid;
+  grid-row-gap: 16px;
+}
+
+@media screen and (max-width: 499px) {
+  #logo {
+    display: none;
+  }
+  .nav {
+    z-index: 10;
+    width: 300px;
+    position: absolute;
+
+    /* This trasform moves the drawer off canvas. */
+    -webkit-transform: translate(-300px, 0);
+    transform: translate(-300px, 0);
+
+    /* Optionally, we animate the drawer. */
+    transition: transform 0.3s ease;
+  }
+
+  .open {
+    -webkit-transform: translate(0, 0);
+    transform: translate(0, 0);
+  }
+
+  .nav__item {
+    display: list-item;
+    border-bottom: 1px solid #e0e0e0;
+    width: 100%;
+    text-align: left;
+  }
+}
+
+@media screen and (min-width: 455px) {
+  
+
+  .headline__content {
+    padding: 16px 16px;
+  }
+
+  .headline__title {
+    font-size: 28px;
+  }
+
+  .headline__description {
+    font-size: 16px;
+  }
+}
+
+@media screen and (min-width: 500px) {
+
+  .header {
+    display: block;
+  }
+  #menu.header__menu {
+    display: none;
+  }
+}
+
+@media screen and (min-width: 650px) {
+  
+  .daftar_item_content {
+    padding: 16px 32px 32px 32px;
+  }
+
+  .daftar_item_title {
+    font-size: 18px;
+  }
+
+  .daftar_item_desc {
+    font-size: 14px;
+  }
+}
+
+@media screen and (min-width: 700px) {
+  .daftar {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-column-gap: 10px;
+    grid-row-gap: 16px;
+  }
+  #favoriteList {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-column-gap: 10px;
+    grid-row-gap: 16px;
+  }
+  
+}
+
+@media (max-width: 768px) {
+  .container-info {
+    flex-direction: column;
+  }
+
+  .detail-info {
+    padding: 30px;
+  }
+
+  .detail__menu-list {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media screen and (min-width: 800px) {
+
+  .nav__list {
+    max-width: 800px;
+    margin: 0 auto;
+  }
+}
+
+@media screen and (min-width: 900px) {
+  .headline {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+  }
+
+  .headline__content {
+    padding: 16px 32px;
+  }
+
+  .daftar {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+  }
+  #favoriteList {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+  }
+}
+
+@media screen and (min-width: 1200px) {
+
+  main {
+    max-width: 100%;
+  }
+}
